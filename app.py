@@ -10,7 +10,7 @@ from sklearn.metrics import mean_squared_error
 # ==========================================
 # PAGE CONFIGURATION
 # ==========================================
-st.set_page_config(page_title="SOTA-1 Predictive Maintenance", page_icon="✈️", layout="wide")
+st.set_page_config(page_title="Predictive Maintenance", layout="wide")
 
 # ==========================================
 # CONSTANTS & DEFINITIONS
