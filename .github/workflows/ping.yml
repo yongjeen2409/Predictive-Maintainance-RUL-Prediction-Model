@@ -1,0 +1,19 @@
+name: Keep App Alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # every 10 minutes
+  workflow_dispatch:        # allows manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send GET request
+        run: |
+          echo "Pinging app..."
+          for i in {1..3}; do
+            curl -I https://predictive-maintainance-rul-prediction-model-sorite-gang.streamlit.app && break
+            sleep 5
+          done
